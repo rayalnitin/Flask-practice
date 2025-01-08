@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <title>Flask Project</title>
+    <style>
+      h1 {
+        font-size: 40px;
+        font-family: Roboto;
+        font-weight: normal;
+        color: rgb(50, 50, 50);
+        text-align: center;
+      }
+      #banner {
+        height: 320px;
+        width: 100%;
+        object-fit: cover;
+      }
+      h2 {
+        font-size: 30px;
+        font-family: Roboto;
+        font-weight: normal;
+        color: rgb(100, 100, 100);
+        text-align: center;
+      }
+      #container {
+        max-width: 900px;
+        margin: 0 auto;
+      }
+      p {
+        font-size: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <h1>Careers 360</h1>
+      <img
+        class="img-fluid"
+        id="banner"
+        src="../static/imag1.jpg"
+        height="350"
+      />
+      <h2>About us</h2>
+      <p class="lead">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis, nemo
+        voluptate voluptatem perspiciatis recusandae repellendus totam ad minus
+        cupiditate, illum pariatur. A quibusdam magni eaque pariatur facere
+        placeat aliquam ipsam? Lorem ipsum dolor, sit amet consectetur
+        adipisicing elit. Nobis, nemo voluptate voluptatem perspiciatis
+        recusandae repellendus totam ad minus cupiditate, illum pariatur. A
+        quibusdam magni eaque pariatur facere placeat aliquam ipsam?
+      </p>
+      <h2>Openings</h2>
+      <div class="box">
+        {% for job in jobs %} {% include 'jobdetail.html' %} {% endfor %}
+      </div>
+    </div>
+    <div style="text-align: center" class="p-2">
+      <button class="btn btn-secondary btn-md">Contact Us</button>
+    </div>
+  </body>
+</html>
