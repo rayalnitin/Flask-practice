@@ -40,6 +40,7 @@
     </style>
   </head>
   <body>
+    {% include 'nav.html' %}
     <div id="container">
       <h1>Careers 360</h1>
       <img
@@ -48,17 +49,25 @@
         src="../static/imag1.jpg"
         height="350"
       />
-      <h2>About us</h2>
-      <p class="lead">
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis, nemo
-        voluptate voluptatem perspiciatis recusandae repellendus totam ad minus
-        cupiditate, illum pariatur. A quibusdam magni eaque pariatur facere
-        placeat aliquam ipsam? Lorem ipsum dolor, sit amet consectetur
-        adipisicing elit. Nobis, nemo voluptate voluptatem perspiciatis
-        recusandae repellendus totam ad minus cupiditate, illum pariatur. A
-        quibusdam magni eaque pariatur facere placeat aliquam ipsam?
-      </p>
-      <h2>Openings</h2>
+      <h2 class="mt-4">About us</h2>
+      <div class="row">
+        <div class="col-md-6">
+          <p class="lead">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis,
+            nemo voluptate voluptatem perspiciatis recusandae repellendus totam
+            ad minus cupiditate, illum pariatur. A quibusdam magni eaque
+            pariatur facere placeat aliquam ipsam? Lorem ipsum dolor, sit amet
+            consectetur adipisicing elit. Nobis, nemo voluptate voluptatem
+            perspiciatis recusandae repellendus totam ad minus cupiditate, illum
+            pariatur. A quibusdam magni eaque pariatur facere placeat aliquam
+            ipsam?
+          </p>
+        </div>
+        <div class="d-none d-md-block col-md-6">
+          <img src="../static/imag3.jpg" style="height: 300px" />
+        </div>
+      </div>
+      <h2 class="mt-4">Openings</h2>
       <div class="box">
         {% for job in jobs %} {% include 'jobdetail.html' %} {% endfor %}
       </div>
@@ -66,5 +75,6 @@
     <div style="text-align: center" class="p-2">
       <button class="btn btn-secondary btn-md">Contact Us</button>
     </div>
+    {% include 'footer.html' %}
   </body>
 </html>
